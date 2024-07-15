@@ -18,7 +18,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "client-s3-deploy": "aws s3 sync build/ s3://todo-list-s3-deployment",
+    "client-cloudfront-invalidate": "aws cloudfront create-invalidation --distribution-id ENQNCRCDW5WZP --paths '/*'",
+    "client-deploy": "npm run build && npm run client-s3-deploy && npm run client-cloudfront-invalidate"
   },
   "eslintConfig": {
     "extends": [
