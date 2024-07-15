@@ -1,0 +1,86 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todo-item.completed {
+  background-color: #f0f0f0;
+  color: #888;
+}
+
+.todo-info {
+  flex: 1;
+  margin-left: 10px;
+  min-width: 0;
+}
+
+.todo-title {
+  margin: 0;
+  font-size: 1.2em;
+  word-wrap: break-word;
+  max-width: 95%; 
+}
+
+.todo-title.completed {
+  text-decoration: line-through;
+}
+
+.todo-description {
+  margin: 0;
+  font-size: 0.9em;
+  color: #777;
+  word-wrap: break-word; 
+  max-width: 95%;
+}
+
+.todo-checkbox {
+  margin-right: 10px;
+}
+
+.todo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-button {
+  background-color: #cacaca;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.icon-button .fas {
+  font-size: 1.2em;
+}
+
+.edit-button .fas {
+  color: #007bff;
+}
+
+.delete-button .fas {
+  color: #dc3545;
+}
+
+.todo-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.todo-edit-title,
+.todo-edit-description {
+  width: 100%;
+}
+
+.todo-edit-description {
+  height: 100px;
+}
