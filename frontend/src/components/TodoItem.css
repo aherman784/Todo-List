@@ -24,7 +24,7 @@
   margin: 0;
   font-size: 1.2em;
   word-wrap: break-word;
-  max-width: 95%; 
+  max-width: 95%;
 }
 
 .todo-title.completed {
@@ -35,7 +35,7 @@
   margin: 0;
   font-size: 0.9em;
   color: #777;
-  word-wrap: break-word; 
+  word-wrap: break-word;
   max-width: 95%;
 }
 

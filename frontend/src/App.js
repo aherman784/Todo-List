@@ -17,7 +17,7 @@ const App = () => {
   // Use the todo_list endpoint to fetch all todos from database
   const fetchTodos = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/todos/");
+      const response = await axios.get("http://3.147.56.208:8000/api/todos/");
       console.log("Fetching todos...");
       setTodos(response.data);
     } catch (error) {
@@ -29,7 +29,7 @@ const App = () => {
   const addTodo = async (newTodo) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/todos/",
+        "http://3.147.56.208:8000/api/todos/",
         newTodo
       );
       console.log("Added todo:", response.data);
@@ -44,7 +44,7 @@ const App = () => {
   const updateTodo = async (updatedTodo) => {
     try {
       const response = await axios.put(
-        `http://localhost:8000/api/todos/${updatedTodo.id}/`,
+        `http://3.147.56.208:8000/api/todos/${updatedTodo.id}/`,
         updatedTodo
       );
       console.log("Updated todo:", response.data);
@@ -59,7 +59,7 @@ const App = () => {
   // Use the todo_detail endpoint to delete a todo from the database
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/todos/${id}/`);
+      await axios.delete(`http://3.147.56.208:8000/api/todos/${id}/`);
       console.log("Deleted todo with id:", id);
       setTodos(todos.filter((todo) => todo.id !== id));
     } catch (error) {

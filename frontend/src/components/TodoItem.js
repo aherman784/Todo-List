@@ -21,7 +21,11 @@ const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
   };
 
   const handleSave = () => {
-    const updatedTodo = { ...todo, title: editedTitle, description: editedDescription };
+    const updatedTodo = {
+      ...todo,
+      title: editedTitle,
+      description: editedDescription,
+    };
     updateTodo(updatedTodo);
     setIsEditing(false);
   };
@@ -33,8 +37,10 @@ const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
   };
 
   return (
-    <ListGroup.Item className={`todo-item ${todo.completed ? 'completed' : ''}`}>
-      <Form.Check 
+    <ListGroup.Item
+      className={`todo-item ${todo.completed ? "completed" : ""}`}
+    >
+      <Form.Check
         type="checkbox"
         checked={todo.completed}
         onChange={handleToggleComplete}
@@ -63,7 +69,7 @@ const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
         </div>
       ) : (
         <div className="todo-info">
-          <h5 className={`todo-title ${todo.completed ? 'completed' : ''}`}>
+          <h5 className={`todo-title ${todo.completed ? "completed" : ""}`}>
             {todo.title}
           </h5>
           <p className="todo-description">{todo.description}</p>
